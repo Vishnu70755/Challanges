@@ -1,0 +1,115 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, form, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Your Unique Font', sans-serif; /* Replace 'Your Unique Font' with the desired font */
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: skyblue; /* Updated header color */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 1rem;
+}
+
+section {
+    margin: 2rem;
+}
+
+#event-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 300px;
+}
+
+#add-event-form form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#add-event-form label {
+    margin-top: 1rem;
+}
+
+#search {
+    text-align: center;
+}
+
+#search-input {
+    padding: 0.5rem;
+    width: 70%;
+    border: 1px solid red; /* Red border for the search bar */
+    transition: border-color 0.3s; /* Smooth transition for the border color */
+}
+
+#search-input:hover {
+    border-color: green; /* Green border color on hover */
+}
+
+#show-all-events {
+    background-color: purple; /* Purple background color for the button */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for the background color */
+}
+
+#show-all-events:hover {
+    background-color: #2c6c91; /* Darker purple on hover */
+}
+
+.highlighted-event {
+    border: 2px solid blue; /* Blue border color for highlighted events */
+    transition: border-color 0.3s; /* Smooth transition for the border color */
+}
+
+.highlighted-event:hover {
+    border-color: green; /* Change border color on hover for highlighted events */
+}
+
+/* Add this style to highlight the searched results with purple color */
+.search-highlight {
+    background-color: #e6e6ff; /* Purple color */
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #5ad7d3;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}

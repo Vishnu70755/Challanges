@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Application | Fitclub</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        .application-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: var(--primary-color-light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid var(--primary-color-extra-light);
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: var(--primary-color-light);
+            color: var(--text-light);
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color-dark);
+        }
+
+        small {
+            display: block;
+            margin-top: 5px;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+
+<div class="application-container">
+    <h2>Membership Application</h2>
+    <form action="process_application.php" method="post" enctype="multipart/form-data">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" placeholder="Enter your full address" required></textarea>
+
+        <label for="idProof">ID Proof (e.g., Driver's License, Passport):</label>
+        <input type="file" id="idProof" name="idProof" accept="image/*,application/pdf" required>
+        <small>Upload a scanned copy or photo of your ID proof (JPEG, PNG, or PDF format).</small>
+
+        <label for="profilePic">Profile Picture:</label>
+        <input type="file" id="profilePic" name="profilePic" accept="image/*" required>
+        <small>Upload a clear profile picture (JPEG or PNG format).</small>
+
+        <label for="plan">Select Membership Plan:</label>
+        <select id="plan" name="plan" required>
+            <option value="basic">Basic Plan</option>
+            <option value="weekly">Weekly Plan</option>
+            <option value="monthly">Monthly Plan</option>
+        </select>
+
+        <label for="duration">Select Duration (in days):</label>
+        <input type="number" id="duration" name="duration" placeholder="Enter the duration in days" required>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" placeholder="Any specific requirements or comments"></textarea>
+
+        <button type="submit"><a href="thank.html"> Submit Application</a></button>
+    </form>
+</div>
+
+</body>
+</html>

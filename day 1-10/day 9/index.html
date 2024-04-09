@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+    <header class="bg-dark text-white text-center py-3">
+        <h1>Event Management System</h1>
+        <nav>
+            <ul class="header">
+                <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Events</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Add Event</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="add-event-form" class="container mt-4">
+        <h2 class="text-center">Add New Event</h2>
+        <form id="event-form">
+            <div class="form-group">
+                <label for="title">Event Title:</label>
+                <input type="text" id="title" name="title" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" class="form-control" rows="4" required></textarea>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="addEvent()">Add Event</button>
+        </form>
+    </section>
+
+    <section id="search" class="container mt-4 text-center">
+        <h2>Search Events</h2>
+        <div class="input-group">
+            <input type="text" id="search-input" class="form-control" placeholder="Search events...">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" onclick="searchEvents()">Search</button>
+            </div>
+        </div>
+        <button class="btn btn-info mt-2" onclick="showAllEvents()">Show All Events</button>
+    </section>
+
+    <section id="event-listing" class="container mt-4">
+        <h2 class="text-center">Upcoming Events</h2>
+        <div id="event-cards" class="row"></div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; 2024 Event Management System</p>
+    </footer>
+
+    <script>
+        // Sample data for events
+        const events = [
+            { title: 'Event 1', date: '2024-02-25', time: '10:00', location: 'Venue 1', description: 'Description for Event 1' },
+            { title: 'Event 2', date: '2024-03-05', time: '14:00', location: 'Venue 2', description: 'Description for Event 2' },
+            { title: 'Event 3', date: '2024-03-15', time: '09:30', location: 'Venue 3', description: 'Description for Event 3' }
+        ];
+
+        // Function to display events
+        function displayEvents(filteredEvents) {
+            const eventCards = document.getElementById('event-cards');
+            eventCards.innerHTML = '';
+
+            const displayList = filteredEvents ? filteredEvents : events;
+
+            displayList.forEach(event => {
+                const card = document.createElement('div');
+                card.classList.add('col-md-4');
+                card.innerHTML = `
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">${event.title}</h3>
+                            <p class="card-text"><strong>Date:</strong> ${event.date}</p>
+                            <p class="card-text"><strong>Time:</strong> ${event.time}</p>
+                            <p class="card-text"><strong>Location:</strong> ${event.location}</p>
+                            <p class="card-text"><strong>Description:</strong> ${event.description}</p>
+                        </div>
+                    </div>
+                `;
+                eventCards.appendChild(card);
+            });
+        }
+
+        // Function to handle form submission
+        function addEvent() {
+            const title = document.getElementById('title').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const location = document.getElementById('location').value;
+            const description = document.getElementById('description').value;
+
+            if (title && date && time && location && description) {
+                const newEvent = {
+                    title,
+                    date,
+                    time,
+                    location,
+                    description
+                };
+                events.push(newEvent);
+                displayEvents();
+                resetForm();
+            } else {
+                alert('Please fill in all fields');
+            }
+        }
+
+        // Function to reset the form
+        function resetForm() {
+            document.getElementById('event-form').reset();
+        }
+
+        // Function to search events
+        function searchEvents() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const eventCards = document.getElementById('event-cards');
+            eventCards.innerHTML = '';
+
+            events.forEach(event => {
+                if (
+                    event.title.toLowerCase().includes(searchTerm) ||
+                    event.date.includes(searchTerm) ||
+                    event.time.includes(searchTerm) ||
+                    event.location.toLowerCase().includes(searchTerm) ||
+                    event.description.toLowerCase().includes(searchTerm)
+                ) {
+                    const card = document.createElement('div');
+                    card.classList.add('col-md-4', 'search-highlight');
+                    card.innerHTML = `
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title">${event.title}</h3>
+                                <p class="card-text"><strong>Date:</strong> ${event.date}</p>
+                                <p class="card-text"><strong>Time:</strong> ${event.time}</p>
+                                <p class="card-text"><strong>Location:</strong> ${event.location}</p>
+                                <p class="card-text"><strong>Description:</strong> ${event.description}</p>
+                            </div>
+                        </div>
+                    `;
+                    eventCards.appendChild(card);
+                }
+            });
+        }
+
+        // Function to show all events
+        function showAllEvents() {
+            // Remove search highlighting
+            const highlightedCards = document.querySelectorAll('.search-highlight');
+            highlightedCards.forEach(card => {
+                card.classList.remove('search-highlight');
+            });
+
+            // Display all events
+            displayEvents();
+        }
+
+        // Initial display of events
+        displayEvents();
+    </script>
+
+    <!-- Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

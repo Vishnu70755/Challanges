@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Online Resume Builder</title>
+</head>
+<body>
+  <header>
+    <h1>Online Resume Builder</h1>
+  </header>
+
+  <section>
+    <h2>Personal Information</h2>
+    <form id="resumeForm">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="contact">Contact:</label>
+      <input type="text" id="contact" name="contact">
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address">
+
+      <label for="linkedIn">LinkedIn:</label>
+      <input type="text" id="linkedIn" name="linkedIn">
+
+      <h2>Education Details</h2>
+      <label for="degree">Degree:</label>
+      <input type="text" id="degree" name="degree">
+
+      <label for="university">University:</label>
+      <input type="text" id="university" name="university">
+
+      <label for="graduationYear">Graduation Year:</label>
+      <input type="text" id="graduationYear" name="graduationYear">
+
+      <h2>Technical Skills</h2>
+      <label for="technicalSkills">Technical Skills:</label>
+      <input type="text" id="technicalSkills" name="technicalSkills">
+
+      <h2>Experience</h2>
+      <label for="jobTitle">Job Title:</label>
+      input type="text" id="jobTitle" name="jobTitle">
+
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company">
+
+      <label for="experienceYear">Year of Experience:</label>
+      <input type="text" id="experienceYear" name="experienceYear">
+
+      <h2>Internships</h2>
+      <label for="internships">Internships:</label>
+      <input type="text" id="internships" name="internships">
+
+      <h2>Certifications</h2>
+      <label for="certifications">Certifications:</label>
+      <input type="text" id="certifications" name="certifications">
+
+      <h2>Projects</h2>
+      <label for="projects">Projects:</label>
+      <input type="text" id="projects" name="projects">
+
+      <h2>Preview Section</h2>
+      <label for="previewSection">Preview Section:</label>
+      <textarea id="previewSection" name="previewSection" rows="4"></textarea>
+
+      <button type="button" onclick="generateResume()">Generate Resume</button>
+      <button type="button" onclick="save()">Save</button>
+      <button type="button" onclick="download()">Download</button>
+    </form>
+
+    <div id="resumeOutput"></div>
+  </section>
+
+  <script>
+    function generateResume() {
+      const form = document.getElementById('resumeForm');
+      const formData = new FormData(form);
+      let output = '<h2>Generated Resume</h2>';
+
+      formData.forEach((value, key) => {
+        output += `<p><strong>${key}:</strong> ${value}</p>`;
+      });
+
+      document.getElementById('resumeOutput').innerHTML = output;
+    }
+
+    function save() {
+      // Placeholder for save functionality
+      alert('Save function placeholder. Implement your save logic.');
+    }
+
+    function download() {
+      // Placeholder for download functionality
+      alert('Download function placeholder. Implement your download logic.');
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

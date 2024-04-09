@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course</title>
+  <style>
+   .pet-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .pet-card {
+      width: 300px;
+      margin: 20px;
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px palevioletred;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .pet-card:hover {
+      transform: scale(1.05);
+    }
+
+    .pet-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .pet-info {
+      padding: 15px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      height: 40px;
+      width: 100%;
+    }
+    button{
+        background-color: orangered;
+    }
+    h1{
+        background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <header>
+   <center><h1>Online Courses </h1></center>
+  </header>
+  <main>
+    <div class="pet-container">
+        <div class="pet-card">
+          <img class="pet-img" src="course2.png" alt="Dog">
+          <div class="pet-info">
+            <center><h2>HTML</h2></center>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dolor provident iusto veritatis, officiis temporibus ipsa ducimus porro voluptates nisi, cumque similique iure, perferendis fugiat voluptate ipsam ut consectetur atque.
+            </p>
+            <button onclick="adoptPet('Dog')">EnrollNow</button>
+          </div>
+        </div>
+        <div class="pet-card">
+            <img class="pet-img" src="course1.jpg" alt="cat">
+            <div class="pet-info">
+              <center><h2>CSS</h2></center>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, laudantium ipsum reprehenderit aut non praesentium possimus quae voluptates, tempore voluptate aspernatur consequatur adipisci vitae. Officia ipsam possimus sint neque mollitia.
+              </p>
+              
+              <button onclick="adoptPet('cat')">EnrollNow</button>
+            </div>
+          </div>
+    
+        <div class="pet-card">
+          <img class="pet-img" src="course3.jpg" alt="fish">
+          <div class="pet-info">
+            <center><h2>PYTHON</h2></center>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores repudiandae quisquam quis eum, corrupti, repellendus molestiae sunt distinctio quos rem, quibusdam nihil iure qui odio provident esse amet cum iusto!
+            </p>
+            <button onclick="adoptPet('fish')">EnrollNow</button>
+          </div>
+        </div>
+            <div class="pet-card">
+                <img class="pet-img" src="course4.png" alt="cat">
+                <div class="pet-info">
+                  <h2>MYSQL</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque maiores dolor possimus ullam at alias quidem, molestias accusantium nostrum cum quia praesentium fugit earum consequuntur a dolores ea vel accusamus.
+                  </p>
+                  <button onclick="adoptPet('Cat')">EnrollNow</button>
+                </div>
+              </div>
+              <div class="pet-card">
+                <img class="pet-img" src="course1.jpg" alt="cat">
+                <div class="pet-info">
+                  <h2>Developer</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque maiores dolor possimus ullam at alias quidem, molestias accusantium nostrum cum quia praesentium fugit earum consequuntur a dolores ea vel accusamus.
+                  </p>
+                  <button onclick="adoptPet('Cat')">EnrollNow</button>
+                </div>
+              </div>
+              <div class="pet-card">
+                <img class="pet-img" src="course5.png" alt="cat">
+                <div class="pet-info">
+                  <h2>Devops</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque maiores dolor possimus ullam at alias quidem, molestias accusantium nostrum cum quia praesentium fugit earum consequuntur a dolores ea vel accusamus.
+                  </p>
+                  <button onclick="adoptPet('Cat')">EnrollNow</button>
+                </div>
+              </div>
+              <div class="pet-card">
+                <img class="pet-img" src="course7.jpg" alt="cat">
+                <div class="pet-info">
+                  <h2>Artificial Intelligence</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque maiores dolor possimus ullam at alias quidem, molestias accusantium nostrum cum quia praesentium fugit earum consequuntur a dolores ea vel accusamus.
+                  </p>
+                  <button onclick="adoptPet('Cat')">EnrollNow</button>
+                </div>
+              </div>
+
+  </main>
+  <footer>
+    <p>&copy; 2024 Online Course Learning</p>
+  </footer>
+  <script>
+    function enrollCourse(courseName) {
+    alert(`You have enrolled in the ${courseName.toUpperCase()} course.`);
+}
+
+  </script>
+</body>
+</html>

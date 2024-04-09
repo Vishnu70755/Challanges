@@ -1,0 +1,75 @@
+/* ===================================================================
+ * fonts.scss
+ *
+ * ------------------------------------------------------------------- */
+
+
+/*
+ * poppins
+================================================================================ */
+
+@font-face {
+  font-family: "poppins-black";
+  src: url("Poppins-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "poppins-extrabold";
+  src: url("Poppins-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "poppins-bold";
+  src: url("Poppins-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "poppins-semibold";
+  src: url("Poppins-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "poppins-medium";
+  src: url("Poppins-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "poppins-regular";
+  src: url("Poppins-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "poppins-light";
+  src: url("Poppins-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "poppins-extralight";
+  src: url("Poppins-ExtraLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "poppins-thin";
+  src: url("Poppins-Thin.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+/*# sourceMappingURL=fonts.css.map */

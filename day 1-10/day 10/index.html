@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Your Weather App</h1>
+        <div>
+            <!-- Use a dropdown for example states -->
+            <select id="locationInput">
+                <option value="andhra_pradesh">Andhra Pradesh</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="delhi">Delhi</option>
+                <option value="kerala">Kerala</option>
+                <option value="hyderabad">Hyderabad</option>
+            </select>
+            <button onclick="searchWeather()">Search</button>
+            <button onclick="showAllWeather()">All Weather Report</button>
+            <button onclick="clearWeather()">Clear</button>
+        </div>
+    </header>
+
+    <!-- Weather Display -->
+    <section id="weatherDisplay" class="weather-box">
+        <div id="currentWeatherInfo"></div>
+        <div id="forecastInfo"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+        <div>
+            <!-- Add social media links or sharing options -->
+        </div>
+        <p>&copy; 2024 Your Weather App. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Example data for all 5 states
+        var exampleData = {
+            "andhra_pradesh": {
+                currentWeather: {
+                    location: "Andhra Pradesh",
+                    temperature: 28,
+                    condition: "Sunny",
+                    windSpeed: 5,
+                    windDirection: "NE",
+                    humidity: 60,
+                    sunrise: "06:30 AM",
+                    sunset: "06:00 PM",
+                    uvIndex: 7,
+                    windGusts: 8,
+                    pressure: 1015,
+                    visibility: 10,
+                    dewPoint: 20,
+                    cloudCover: 20,
+                    precipitation: "None"
+                },
+                forecast: [
+                    {
+                        location: "Andhra Pradesh",
+                        date: "2024-02-21",
+                        highTemp: 30,
+                        lowTemp: 20,
+                        condition: "Clear"
+                    },
+                    {
+                        location: "Andhra Pradesh",
+                        date: "2024-02-22",
+                        highTemp: 31,
+                        lowTemp: 21,
+                        condition: "Partly Cloudy"
+                    },
+                    // Add more forecast entries if needed
+                ]
+            },
+            // Add data for other states...
+        };
+
+        function searchWeather() {
+            var location = document.getElementById("locationInput").value;
+            var apiUrl = "YOUR_WEATHER_API_ENDPOINT" + "?location=" + location;
+            fetchWeather(apiUrl, location);
+        }
+
+        function showAllWeather() {
+            var states = ["andhra_pradesh", "mumbai", "delhi", "kerala", "hyderabad"];
+
+            states.forEach(state => {
+                var apiUrl = "YOUR_WEATHER_API_ENDPOINT" + "?location=" + state;
+                fetchWeather(apiUrl, state);
+            });
+        }
+
+        function fetchWeather(apiUrl, locationName) {
+            // Simulated example data, replace with actual API response
+            var exampleData = {
+                currentWeather: {
+                    location: locationName,
+                    temperature: getRandomTemperature(),
+                    condition: "Sunny",
+                    windSpeed: 5,
+                    windDirection: "NE",
+                    humidity: getRandomHumidity(),
+                    sunrise: "06:30 AM",
+                    sunset: "06:00 PM",
+                    uvIndex: 7,
+                    windGusts: 8,
+                    pressure: 1015,
+                    visibility: 10,
+                    dewPoint: 5,
+                    cloudCover: 20,
+                    precipitation: "None"
+                },
+                forecast: [
+                    {
+                        location: locationName,
+                        date: "2024-02-21",
+                        highTemp: getRandomTemperature(),
+                        lowTemp: getRandomTemperature() - 5,
+                        condition: "Clear"
+                    },
+                    {
+                        location: locationName,
+                        date: "2024-02-22",
+                        highTemp: getRandomTemperature(),
+                        lowTemp: getRandomTemperature() - 5,
+                        condition: "Partly Cloudy"
+                    },
+                    // Add more forecast entries if needed
+                ]
+            };
+
+            // Update the display using the example data
+            updateCurrentWeather(exampleData.currentWeather);
+            updateForecast(exampleData.forecast);
+        }
+
+        function updateCurrentWeather(currentWeather) {
+            var currentWeatherInfo = document.getElementById("currentWeatherInfo");
+            currentWeatherInfo.innerHTML = "";
+            currentWeatherInfo.innerHTML += `
+                <div>
+                    <h3>${currentWeather.location}</h3>
+                    <p>Temperature: ${currentWeather.temperature}&deg;C</p>
+                    <p>Condition: ${currentWeather.condition}</p>
+                    <p>Wind: ${currentWeather.windSpeed} m/s, ${currentWeather.windDirection}</p>
+                    <p>Humidity: ${currentWeather.humidity}%</p>
+                    <p>Sunrise: ${currentWeather.sunrise}</p>
+                    <p>Sunset: ${currentWeather.sunset}</p>
+                    <p>UV Index: ${currentWeather.uvIndex}</p>
+                    <p>Wind Gusts: ${currentWeather.windGusts} m/s</p>
+                    <p>Pressure: ${currentWeather.pressure} hPa</p>
+                    <p>Visibility: ${currentWeather.visibility} km</p>
+                    <p>Dew Point: ${currentWeather.dewPoint}&deg;C</p>
+                    <p>Cloud Cover: ${currentWeather.cloudCover}%</p>
+                    <p>Precipitation: ${currentWeather.precipitation}</p>
+                </div>
+            `;
+        }
+
+        function updateForecast(forecast) {
+            var forecastInfo = document.getElementById("forecastInfo");
+            forecastInfo.innerHTML = "";
+            forecastInfo.innerHTML += `
+                <div>
+                    <h3>${forecast[0].location} Forecast</h3>
+                    <p>Today's Date: ${forecast[0].date}</p>
+                    <p>High: ${forecast[0].highTemp}&deg;C, Low: ${forecast[0].lowTemp}&deg;C</p>
+                    <p>Condition: ${forecast[0].condition}</p>
+                </div>
+                <div>
+                    <h3>${forecast[1].location} Forecast</h3>
+                    <p>Tomorrow's Date: ${forecast[1].date}</p>
+                    <p>High: ${forecast[1].highTemp}&deg;C, Low: ${forecast[1].lowTemp}&deg;C</p>
+                    <p>Condition: ${forecast[1].condition}</p>
+                </div>
+            `;
+        }
+
+        function clearWeather() {
+            document.getElementById("currentWeatherInfo").innerHTML = "";
+            document.getElementById("forecastInfo").innerHTML = "";
+        }
+
+        // Helper function to generate random temperature for demonstration
+        function getRandomTemperature() {
+            return Math.floor(Math.random() * (30 - 10 + 1)) + 10;
+        }
+
+        // Helper function to generate random humidity for demonstration
+        function getRandomHumidity() {
+            return Math.floor(Math.random() * (80 - 40 + 1)) + 40;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+/* Add your CSS styles here */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://c8.alamy.com/comp/2RE20FR/three-dimensional-map-of-india-on-white-background-3d-illustration-2RE20FR.jpg');
+    background-size: cover; /* Make the background image cover the entire screen */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixed background image */
+    color: #333;
+    margin: 0;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header div {
+    margin-top: 10px;
+}
+
+select,
+button {
+    padding: 10px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+section.weather-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.weather-box>div {
+    width: 48%;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Add margin to separate left and right sections */
+}
+
+footer {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 0;
+}
+footer {
+    background-color: #3498db;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;}

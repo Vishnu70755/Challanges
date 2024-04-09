@@ -1,0 +1,242 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, table {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* Light gray background */
+    color: #333;
+  }
+  
+  /* Sidebar styles */
+  #sidebar {
+    width: 250px;
+    background-color: #394240; /* Dark teal background */
+    color: #d4d8d4;
+    padding-top: 20px;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #d4d8d4;
+    text-decoration: none;
+  }
+  
+  .brand i {
+    margin-right: 5px;
+  }
+  
+  .side-menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .side-menu a {
+    display: block;
+    padding: 15px;
+    color: #d4d8d4;
+    text-decoration: none;
+  }
+  
+  .side-menu a:hover {
+    background-color: #556b78; /* Darker teal on hover */
+  }
+  
+  .side-menu .active a {
+    background-color: #00bcd4; /* Teal for active item */
+    color: #fff;
+  }
+  
+  .logout {
+    color: #ef5350; /* Red for logout */
+  }
+  
+  /* Content styles */
+  #content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+  }
+  
+  nav .notification {
+    position: relative;
+  }
+  
+  .notification .num {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ef5350; /* Red for notification */
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 50%;
+    font-size: 12px;
+  }
+  
+  main {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .head-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .head-title h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .breadcrumb {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .breadcrumb li {
+    margin-right: 5px;
+  }
+  
+  .breadcrumb a {
+    color: #00bcd4; /* Teal for breadcrumb link */
+    text-decoration: none;
+  }
+  
+  .btn-download {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #00bcd4; /* Teal for button */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .box-info {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .box-info li {
+    flex: 1;
+    background-color: #00bcd4; /* Teal for info boxes */
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .table-data {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .order,
+  .todo {
+    flex: 1;
+    background-color: #fff;
+    margin-right: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order h3,
+  .todo h3 {
+    font-size: 18px;
+  }
+  
+  .order table,
+  .todo .todo-list {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+  }
+  
+  .order th,
+  .order td,
+  .todo li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .order th {
+    background-color: #00bcd4; /* Teal for table header */
+    color: #fff;
+  }
+  
+  .order img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  
+  .completed {
+    background-color: #66bb6a; /* Green for completed status */
+    color: #fff;
+  }
+  
+  .pending {
+    background-color: #ffee58; /* Yellow for pending status */
+    color: #333;
+  }
+  
+  .process {
+    background-color: #00bcd4; /* Teal for process status */
+    color: #fff;
+  }
+  
+  .todo .completed p,
+  .todo .not-completed p {
+    text-decoration: line-through;
+    color: #777;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    #sidebar {
+      width: 100%;
+      position: relative;
+      height: auto;
+      padding-bottom: 20px;
+    }
+  
+    #content {
+      margin-left: 0;
+    }
+  }
+  

@@ -1,0 +1,175 @@
+@media only screen and (max-width:1300px){
+    .bike-tab-right ul li{
+        border-right: none;
+    }
+}
+/* Tablet Landscape View  */
+
+@media only screen and (max-width:992px){
+    .partner-logo{
+        margin-bottom: 30px;
+    }
+    .lg-pb{
+        padding-bottom: 30px;
+    }
+    .half-width{
+        width:100% !important;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .large-margin-top{
+        margin-top: 30px;
+    }
+
+}
+/* Tablet Portrait View  */
+@media only screen and (max-width: 768px){
+    .medium-margin-bottom{
+        margin-bottom: 30px;
+    }
+    .medium-margin-top{
+        margin-top: 30px;
+    }
+    section.testimonial {
+        padding-bottom: 0px;
+    }
+    .employee-quote>p{
+        padding: 0px 10px;
+    }
+    button.btn-customized, button.btn-customized-2{
+        font-size: 10vw;
+    }
+    #employee-carousel a.carousel-control-prev span.fas.fa-angle-left{
+        margin-left: -60px;
+    }
+    #employee-carousel a.carousel-control-next span.fas.fa-angle-right{
+        margin-right: -60px;
+    }
+    .quater-width{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .support-type ul li{
+        margin-bottom: 20px;
+    }
+    .mid-wrap{
+        flex-wrap: wrap;
+    }
+    .bike-tab-bg,.car-tab-bg{
+        box-shadow: inset 0 0 0 1000px rgba(255,255,255, 0.8);
+    }
+}
+/* Large Mobile View  */
+@media only screen and (max-width: 576px){
+    .small-flex-wrap{
+        flex-wrap: wrap;
+    }
+    .banner h2{
+        font-size: 40px;
+        line-height: 55px;
+    }
+    .scroll-pills ul li a.nav-link, .scroll-pills ul li a, .scroll-pills ul li a.nav-link, .scroll-pills ul li a.active{
+        font-size: 20px;
+    }
+    .scroll-pills ul li a.nav-link, .scroll-pills ul li a.active{
+        margin-right: 0px;
+    }
+    .bike-tab-right ul li a{
+        font-size: 18px;
+    }
+    .bike-tab-right h3{
+        font-size: 30px;
+    }
+    .agent-feature-block{
+        margin-right: 35px;
+        margin-left: 35px;
+    }
+    section.section-padding.employee-information {
+        padding: 50px 10px;
+    }
+    
+    section.section-padding.employee-quote-slider {
+        padding: 50px 20px;
+    }
+    .testimonial-block{
+        flex-wrap: wrap;
+    }
+    .why-choose-block h3{
+        font-size: 20px;
+    }
+    .why-choose-block p{
+        font-size: 16px;
+        text-align: justify;
+    }
+    .owl-carousel .owl-prev{
+        left: 0%;
+    }
+    .owl-carousel .owl-next{
+        right: 0%;
+    }
+    .categories a{
+        font-size: 18px;
+    }
+    .contact-form .purpose ul li a{
+        font-size: 16px;
+    }
+    section.section-bg.why-join {
+        margin-top: -200px;
+    }
+    .employee-quote-table h3{
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .employee-quote-table td{
+        font-size: 14px;
+    }
+    .table-btn{
+        font-size: 14px;
+    }
+    .table-btn-mobile{
+        display: block;
+    }
+    .table-btn-web{
+        display: none;
+    }
+}
+
+/* small Mobile View  */
+@media only screen and (max-width: 380px){
+    .contact-form .purpose ul li{
+        margin-right: 0px;
+    }
+    .earning-form-tab ul li a.nav-link{
+        font-size: 20px;
+    }
+}
+/* Tablet or higher width device  */
+@media only screen and (min-width: 768px){
+    .upper-overlapping{
+        margin-top: -80px!important;
+    }
+    .up-right-overlapping{
+        position: relative;
+        top: -50px;
+        right: -100px;
+    }
+    .left-top-overlapping{
+        position: relative;
+        left: -15%;
+        top: -50px;
+    }
+}
+@media only screen and (min-width:992px) and (max-width:1199px){
+    .header-menu ul li a{
+        font-size: 15px;
+    }
+    
+}
+@media only screen and (min-width:577px){
+    .table-btn-mobile{
+        display: none;
+    }
+    .table-btn-web{
+        display: block;
+    }
+}

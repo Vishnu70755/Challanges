@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Tracking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"
+        integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css"
+        integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+        integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <!-- Navbar Start  -->
+    <nav class="navbar navbar-expand-lg black-bg navbar-dark sticky-top header-menu">
+        <div class="container">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="#"><img src="LOGO (1).png" alt="" class="logo"></a>
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Links -->
+            <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link default-color text-uppercase"> Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="earn-with-bike.html" class="nav-link default-color text-uppercase"> Earn with us </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="delivery.html" class="nav-link default-color text-uppercase">D Delivery </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="location-tracking.html" class="nav-link default-color text-uppercase"> Track Package</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link default-color text-uppercase"> Contact Us </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link default-color text-uppercase dropdown-toggle"  data-toggle="dropdown" data-hover="dropdown"> More </a>
+                        <div class="dropdown-menu fadeAnimation black-bg" aria-labelledby="navbar-drop">
+                            <a href="about.html" class="dropdown-item default-color">About Us</a>
+                            <a href="blog-home.html" class="dropdown-item default-color">Blog</a>
+                            <a href="bike-1.html" class="dropdown-item default-color">Car</a>
+                            <a href="bike.html" class="dropdown-item default-color">Bike</a>
+                            <a href="career.html" class="dropdown-item default-color">Career</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle default-color" href="#" id="navbar-drop-3"
+                            data-toggle="dropdown"><i class="fas fa-globe"></i> ENG </a>
+                        <div class="dropdown-menu black-bg fadeAnimation">
+                            <a class="dropdown-item default-color" href="#">Bangla</a>
+                            <a class="dropdown-item default-color" href="#">Hindi</a>
+                            <a class="dropdown-item default-color" href="#">Spanish</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End  -->
+    <main class="section-padding section-bg">
+        <div class="container">
+            <div class="row shadow pb-3 bg-white">
+                <div class="col-md-12">
+                    <h2 class="text-center map-title">Delivery Status</h2>
+                </div>
+                <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
+                    <div class="delivery-timeline medium-margin-bottom">
+                        <div class="timeline-container">
+                            <p>Item Pickup</p>
+                        </div>
+                        <div class="timeline-container">
+                            <p>Item on Transit</p>
+                        </div>
+                        <div class="timeline-container">
+                            <p>Item Outside for Delivery</p>
+                        </div>
+                        <div class="timeline-container">
+                            <p>Item Delivered</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="delivery-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14602.448758403647!2d90.40546413037625!3d23.79682040306251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7a7ba38543b%3A0x91d5f14ad296d72e!2sGulshan%202%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1610807328402!5m2!1sen!2sbd"
+                            width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                        <p class="location-name">
+                            Gulsan 2, Dhaka
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="map-back mt-4 ml-auto">
+                    <a href="#" class="default-btn">Back <i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"
+        integrity="sha512-iceXjjbmB2rwoX93Ka6HAHP+B76IY1z0o3h+N1PeDtRSsyeetU3/0QKJqGyPJcX63zysNehggFwMC/bi7dvMig=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

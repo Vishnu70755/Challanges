@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Your Task Manager</title>
+</head>
+<body >
+    <div class="task-manager">
+        <header>
+            <h1>Task Manager</h1>
+        </header></div>
+        <div>
+        <section class="task-section">
+            <form id="task-form" align="center" >
+                <div class="example">
+                <input type="text" id="task-input" placeholder="Enter task">
+                <button type="button" onclick="addTask()">Add Task</button>
+            </form>
+            <ul id="task-list"></ul>
+        </section>
+    </div>
+    <script>
+        function addTask() {
+            // Get the input value
+            var taskInput = document.getElementById('task-input');
+            var taskValue = taskInput.value.trim();
+
+            // Check if the input is not empty
+            if (taskValue !== '') {
+                // Create a new list item and append it to the task list
+                var listItem = document.createElement('li');
+                listItem.innerHTML = taskValue + ' <button onclick="removeTask(this)">Remove</button>';
+                document.getElementById('task-list').appendChild(listItem);
+
+                // Clear the input field
+                taskInput.value = '';
+            }
+        }
+
+        function removeTask(button) {
+            // Get the parent <li> element of the button
+            var listItem = button.parentNode;
+
+            // Remove the <li> element from the task list
+            listItem.parentNode.removeChild(listItem);
+        }
+    </script>
+</body>
+</html>

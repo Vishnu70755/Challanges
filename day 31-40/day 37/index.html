@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jannu's ride share</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"
+        integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css"
+        integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <!-- Header Start  -->
+    <header class="default-bg">
+        <!-- Navbar Start  -->
+        <nav class="navbar navbar-expand-lg black-bg navbar-dark sticky-top header-menu">
+            <div class="container">
+                <!-- Brand/logo -->
+                <a class="navbar-brand" href="#"><img src="LOGO (1).png" alt="" class="logo"></a>
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Links -->
+                <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link default-color text-uppercase"> Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="-with-bike.html" class="nav-link default-color text-uppercase"> Earn with us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="delivery.html" class="nav-link default-color text-uppercase"> Delivery </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="location-tracking.html" class="nav-link default-color text-uppercase"> Track
+                                Package</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link default-color text-uppercase"> Contact Us </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link default-color text-uppercase dropdown-toggle"
+                                data-toggle="dropdown" data-hover="dropdown"> More </a>
+                            <div class="dropdown-menu fadeAnimation black-bg" aria-labelledby="navbar-drop">
+                                <a href="about.html" class="dropdown-item default-color">About Us</a>
+                                <a href="blog-home.html" class="dropdown-item default-color">Blog</a>
+                                <a href="bike-1.html" class="dropdown-item default-color">Car</a>
+                                <a href="bike.html" class="dropdown-item default-color">Bike</a>
+                                <a href="career.html" class="dropdown-item default-color">Career</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle default-color" href="#" id="navbar-drop-3"
+                                data-toggle="dropdown"><i class="fas fa-globe"></i> ENG </a>
+                            <div class="dropdown-menu black-bg fadeAnimation">
+                                <a class="dropdown-item default-color" href="#">Bangla</a>
+                                <a class="dropdown-item default-color" href="#">Hindi</a>
+                                <a class="dropdown-item default-color" href="#">Spanish</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End  -->
+
+        <!-- Banner Start  -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <div class="banner">
+                        <h2 class="text-white">Ensure your Best Ride Share with Jannu's ride share</h2>
+                        <p class="text-white ">Best Ride Sharing Company in Banglsdesh</p>
+                        <div class="header-call-to-action">
+                            <button data-toggle="modal" data-target="#takeARideModal">Take a Ride <i
+                                    class="fas fa-angle-right"></i></button>
+                            <button class="helveticaNue-font">Estimate Fair <i class="fas fa-angle-right"></i></button>
+                        </div>
+                        <div class="modal" id="takeARideModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header default-bg text-white">
+                                        <h4 class="modal-title ml-auto">Take A Ride</h4>
+                                        <button type="button" class="close text-white"
+                                            data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" data-toggle="pill" href="#bikeEstimate"><i
+                                                        class="fas fa-motorcycle"></i> Bike</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="pill" href="#carEstimate"><i
+                                                        class="fas fa-car"></i> Car</a>
+                                            </li>
+                                        </ul>
+
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div class="tab-pane container active" id="bikeEstimate">
+                                                <form action="" id="bikeEstimateFrom">
+                                                    <div class="form-group">
+                                                        <label for="pickupAddress">Pick up Address </label>
+                                                        <input type="text" name="pickupAddress" id="pickupAddress"
+                                                            class="form-control shadow">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="destinationAddress">Destination Address </label>
+                                                        <input type="text" name="destinationAddress"
+                                                            id="destinationAddress" class="form-control shadow">
+                                                    </div>
+                                                    <div class="form-group d-flex justify-content-around">
+                                                        <label for="luxury"> <input type="radio" name="vehicleType"
+                                                                id="luxury" value="luxury"> Luxury</label>
+                                                        <label for="businessClass"> <input type="radio"
+                                                                name="vehicleType" id="businessClass"
+                                                                value="businessClass"> Business Class</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <button class="btn btn-primary d-block ml-auto"
+                                                            data-toggle="modal"
+                                                            data-target="#locationSelectorModal">Estimate Fair <i
+                                                                class="fas fa-angle-right"></i></button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="tab-pane container fade" id="carEstimate">
+                                                <form action="" id="carEstimateFrom">
+                                                    <div class="form-group">
+                                                        <label for="pickupAddress">Pick up Address </label>
+                                                        <input type="text" name="pickupAddress" id="pickupAddress"
+                                                            class="form-control shadow">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="destinationAddress">Destination Address </label>
+                                                        <input type="text" name="destinationAddress"
+                                                            id="destinationAddress" class="form-control shadow">
+                                                    </div>
+                                                    <div class="form-group d-flex justify-content-around">
+                                                        <label for="luxury"> <input type="radio" name="vehicleType"
+                                                                id="luxury" value="luxury"> Luxury</label>
+                                                        <label for="businessClass"> <input type="radio"
+                                                                name="vehicleType" id="businessClass"
+                                                                value="businessClass"> Business Class</label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <button class="btn btn-primary d-block ml-auto"
+                                                            data-toggle="modal"
+                                                            data-target="#locationSelectorModal">Estimate Fair <i
+                                                                class="fas fa-angle-right"></i></button>
+                                                    </div>
+                                                </form>
+
+                                            </div>
+
+                                            <div class="modal" id="locationSelectorModal">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header default-bg text-white">
+                                                            <h4 class="modal-title ml-auto">Take A Ride</h4>
+                                                            <button type="button" class="close text-white"
+                                                                data-toggle="modal" data-target="#fairDetails"><i
+                                                                    class="fas fa-arrow-right"></i></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <iframe
+                                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14602.448758403647!2d90.40546413037625!3d23.79682040306251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7a7ba38543b%3A0x91d5f14ad296d72e!2sGulshan%202%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1610865483002!5m2!1sen!2sbd"
+                                                                width="100%" height="450" frameborder="0"
+                                                                style="border:0;" allowfullscreen="" aria-hidden="false"
+                                                                tabindex="0"></iframe>
+                                                            <div>
+                                                                <p><i class="fas fa-map-marker-alt"></i> Current
+                                                                    Location</p>
+                                                                <input type="text" class="form-control shadow"
+                                                                    placeholder="Search Location">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal" id="fairDetails">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header default-bg text-white">
+                                                            <h4 class="modal-title ml-auto">Take A Ride</h4>
+                                                            <button type="button" class="close text-white"
+                                                                data-dismiss="modal">&times;</button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <pre class="text-dark">
+                                                                Pickup Point:   Road #39, Bashundhara,
+                                                                Dhaka
+                                                                Dropup Point:    Road #39, Bashundhara,
+                                                                Dhaka
+                                                                Distance:    22km
+                                                                Fair:    BDT 380.00
+                                                            </pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="home-header.png" alt="" class="img-fluid banner-image">
+                </div>
+            </div>
+        </div>
+        <!-- Banner End  -->
+    </header>
+
+    <!-- Feature Section Start  -->
+    <section class="feature section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- Feature Block  -->
+                <div class="col-md-4">
+                    <div class="feature-block">
+                        <div class="feature-icon">
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="feature-description">
+                            <h3>sliding feature</h3>
+                            <p>
+                               Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution..
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature Block  -->
+                <div class="col-md-4">
+                    <div class="feature-block">
+                        <div class="feature-icon">
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="feature-description">
+                            <h3>sliding feature</h3>
+                            <p>
+                               Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution..
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature Block  -->
+                <div class="col-md-4">
+                    <div class="feature-block">
+                        <div class="feature-icon">
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="feature-description">
+                            <h3>sliding feature</h3>
+                            <p>
+                               Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution..
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Feature Section End  -->
+
+    <!-- Why choose Jannu's ride share   -->
+    <section class="why-choose-Jannu's ride share  section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title">why choose Jannu's ride share </h2>
+                    <p class="section-sub-title"> Choose Jannu's ride share  for the best service</p>
+                </div>
+            </div>
+        </div>
+        <div class="container content-top-space">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="why-choose-block d-flex">
+                        <img src="lady-with-laptop.png" alt="">
+                        <div class="why-choose-description">
+                            <h3>Why Choose</h3>
+                            <p>LJannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="why-choose-block d-flex">
+                        <img src="lady-with-laptop.png" alt="">
+                        <div class="why-choose-description">
+                            <h3>Why Choose</h3>
+                            <p>LJannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="why-choose-block d-flex">
+                        <img src="lady-with-laptop.png" alt="">
+                        <div class="why-choose-description">
+                            <h3>Why Choose</h3>
+                            <p>LJannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="why-choose-block d-flex">
+                        <img src="lady-with-laptop.png" alt="">
+                        <div class="why-choose-description">
+                            <h3>Why Choose</h3>
+                            <p>LJannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="why-choose-block d-flex">
+                        <img src="lady-with-laptop.png" alt="">
+                        <div class="why-choose-description">
+                            <h3>Why Choose</h3>
+                            <p>LJannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="why-choose-block d-flex">
+                        <img src="lady-with-laptop.png" alt="">
+                        <div class="why-choose-description">
+                            <h3>Why Choose</h3>
+                            <p>LJannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Section End  -->
+
+    <!-- Service Section Start  -->
+    <section class="pt-5 service">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title">services</h2>
+                    <p class="section-sub-title"> Choose Jannu's ride share  for the best service</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="scroller scroller-left"><i class="fas fa-angle-left"></i></div>
+                    <div class="scroller scroller-right"><i class="fas fa-angle-right"></i></div>
+                    <div class="scroll-pills">
+                        <ul class="nav nav-pills list">
+                            <li class="nav-item pill-tab-left">
+                                <a data-toggle="pill" href="#bike" class="nav-link active" id="service-bike-pill">
+                                    <div class="tab-image-holder">
+                                        <img src="motorbike.svg" alt="" class="img-fluid" id="bike-pill-image">
+                                    </div>
+                                    Bike
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-toggle="pill" href="#car" class="nav-link" id="service-car-pill">
+                                    <div class="tab-image-holder">
+                                        <img src="baby-car.svg" alt="" class="img-fluid" id="car-pill-image">
+                                    </div>
+                                    Car
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-toggle="pill" href="#delivery" class="nav-link" id="service-delivery-pill">
+                                    <div class="tab-image-holder">
+                                        <img src="fast.svg" alt="" class="img-fluid"
+                                            id="delivery-pill-image">
+                                    </div>
+                                    Delivery
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tab Panes  -->
+        <div class="tab-content container-fluid" id="service-tab-pane">
+            <div id="bike" class="tab-pane fade-in active">
+                <div class="row tab-bg bike-tab-bg">
+                    <div class="col-md-6 ">
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="bike-tab-right d-flex flex-column align-item-center justify-content-center h-100 text-center">
+                            <h3>Take a comfortable ride with Jannu's ride share </h3>
+                            <p>Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.</p>
+                            <ul>
+                                <li><a href="#">Bike Feature</a></li>
+                                <li><a href="#">Bike Feature</a></li>
+                                <li><a href="#">Bike Feature</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="car" class="tab-pane fade-in">
+                <div class="row tab-bg car-tab-bg">
+                    <div class="col-md-6 d-flex flex-column align-item-center justify-content-center">
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="bike-tab-right d-flex flex-column align-item-center justify-content-center h-100 text-center">
+                            <h3>Take a comfortable ride with Jannu's ride share  Car</h3>
+                            <p>Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.</p>
+                            <ul>
+                                <li><a href="#">Bike Feature</a></li>
+                                <li><a href="#">Bike Feature</a></li>
+                                <li><a href="#">Bike Feature</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="delivery" class="tab-pane fade-in">
+                <div class="row tab-bg delivery-tab-bg">
+                    <div class="col-md-6 d-flex flex-column align-item-center justify-content-center">
+                    </div>
+                    <div class="col-md-6">
+                        <div
+                            class="bike-tab-right d-flex flex-column align-item-center justify-content-center h-100 text-center">
+                            <h3>Take a comfortable ride with Jannu's ride share  Car</h3>
+                            <p>Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.</p>
+                            <ul>
+                                <li><a href="#">Bike Feature</a></li>
+                                <li><a href="#">Bike Feature</a></li>
+                                <li><a href="#">Bike Feature</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service Section End  -->
+
+    <!-- Earn with Jannu's ride share  start  -->
+    <section class="section-padding earn-with-Jannu's ride share ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title">Earn with Jannu's ride share </h2>
+                    <p class="section-sub-title"> Choose Jannu's ride share  for the best service</p>
+                </div>
+            </div>
+        </div>
+        <div class="container content-top-space d-block d-md-none">
+            <div class="row">
+                <div class="owl-carousel" id="earn-carousel">
+                    <div class="earn-block">
+                        <img src="lady-with-laptop.png" alt="">
+                        <h3>have a car</h3>
+                        <p>
+                            Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                        </p>
+                        <a href="#">let's start <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="earn-block">
+                        <img src="lady-with-laptop.png" alt="">
+                        <h3>have a car</h3>
+                        <p>
+                            Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                        </p>
+                        <a href="#">let's start <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="earn-block">
+                        <img src="lady-with-laptop.png" alt="">
+                        <h3>have a car</h3>
+                        <p>
+                            Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                        </p>
+                        <a href="#">let's start <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="earn-block">
+                        <img src="lady-with-laptop.png" alt="">
+                        <h3>have a car</h3>
+                        <p>
+                            Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                        </p>
+                        <a href="#">let's start <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="earn-block">
+                        <img src="lady-with-laptop.png" alt="">
+                        <h3>have a car</h3>
+                        <p>
+                            Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                        </p>
+                        <a href="#">let's start <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="earn-block">
+                        <img src="lady-with-laptop.png" alt="">
+                        <h3>have a car</h3>
+                        <p>
+                            Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                        </p>
+                        <a href="#">let's start <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- For Web View  -->
+
+        <div class="container d-none d-md-block">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="earn-block">
+                        <img src="lady-with-laptop.png" alt="">
+                        <h3>have a car</h3>
+                        <p>
+                            Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                        </p>
+                        <a href="#">let's start <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="earn-block">
+                        <img src="lady-with-laptop.png" alt="">
+                        <h3>have a car</h3>
+                        <p>
+                            Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                        </p>
+                        <a href="#">let's start <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="earn-block">
+                        <img src="lady-with-laptop.png" alt="">
+                        <h3>have a car</h3>
+                        <p>
+                            Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                        </p>
+                        <a href="#">let's start <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Earn with Jannu's ride share  section end  -->
+
+    <!-- Blog section start  -->
+    <section class="section-padding blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title">From our blog and press</h2>
+                    <p class="section-sub-title"> Choose Jannu's ride share  for the best service</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="owl-carousel">
+                    <!-- Blog block  -->
+                    <div class="blog-block">
+                        <img src="mobiles.png" alt="" class="img-fluid">
+                        <h3>Jannu's ride share  TO START ITS JOURNEY IN BANGLADESH</h3>
+                        <div class="blog-meta-data">
+                            <span class="date"><i class="fas fa-calendar-alt"></i> 10 FEB 2018</span>
+                            <span class="paper-name"> <i class="fas fa-newspaper"></i> daily prothom alo </span>
+                        </div>
+                        <p class="blog-content">
+                            Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution..
+                        </p>
+                        <a href="#" class="read-more">read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Blog block  -->
+                    <div class="blog-block">
+                        <img src="mobiles.png" alt="" class="img-fluid">
+                        <h3>Jannu's ride share  TO START ITS JOURNEY IN BANGLADESH</h3>
+                        <div class="blog-meta-data">
+                            <span class="date"><i class="fas fa-calendar-alt"></i> 10 FEB 2018</span>
+                            <span class="paper-name"> <i class="fas fa-newspaper"></i> daily prothom alo </span>
+                        </div>
+                        <p class="blog-content">
+                           Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution..
+                        </p>
+                        <a href="#" class="read-more">read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Blog block  -->
+                    <div class="blog-block">
+                        <img src="mobiles.png" alt="" class="img-fluid">
+                        <h3>Jannu's ride share  TO START ITS JOURNEY IN BANGLADESH</h3>
+                        <div class="blog-meta-data">
+                            <span class="date"><i class="fas fa-calendar-alt"></i> 10 FEB 2018</span>
+                            <span class="paper-name"> <i class="fas fa-newspaper"></i> daily prothom alo </span>
+                        </div>
+                        <p class="blog-content">
+                           Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution..
+                        </p>
+                        <a href="#" class="read-more">read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Blog block  -->
+                    <div class="blog-block">
+                        <img src="mobiles.png" alt="" class="img-fluid">
+                        <h3>Jannu's ride share  TO START ITS JOURNEY IN BANGLADESH</h3>
+                        <div class="blog-meta-data">
+                            <span class="date"><i class="fas fa-calendar-alt"></i> 10 FEB 2018</span>
+                            <span class="paper-name"> <i class="fas fa-newspaper"></i> daily prothom alo </span>
+                        </div>
+                        <p class="blog-content">
+                           Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution..
+                        </p>
+                        <a href="#" class="read-more">read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Blog block  -->
+                    <div class="blog-block">
+                        <img src="mobiles.png" alt="" class="img-fluid">
+                        <h3>Jannu's ride share TO START ITS JOURNEY IN BANGLADESH</h3>
+                        <div class="blog-meta-data">
+                            <span class="date"><i class="fas fa-calendar-alt"></i> 10 FEB 2018</span>
+                            <span class="paper-name"> <i class="fas fa-newspaper"></i> daily prothom alo </span>
+                        </div>
+                        <p class="blog-content">
+                           Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution..
+                        </p>
+                        <a href="#" class="read-more">read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Blog block  -->
+                    <div class="blog-block">
+                        <img src="mobiles.png" alt="" class="img-fluid">
+                        <h3>Jannu's ride share TO START ITS JOURNEY IN BANGLADESH</h3>
+                        <div class="blog-meta-data">
+                            <span class="date"><i class="fas fa-calendar-alt"></i> 10 FEB 2018</span>
+                            <span class="paper-name"> <i class="fas fa-newspaper"></i> daily prothom alo </span>
+                        </div>
+                        <p class="blog-content">
+                           Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution..
+                        </p>
+                        <a href="#" class="read-more">read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End  -->
+
+    <!-- Testimonial Section Start  -->
+
+    <section class="section-padding testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title">peoples quotes</h2>
+                    <p class="section-sub-title"> Choose Jannu's ride share  for the best service</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="play-pause d-flex justify-content-center">
+                        <button class="btn-customized"><i class="fas fa-quote-left"></i></button>
+                    </div>
+                    <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block d-flex align-item-center">
+                                            <img src="client-3.jpg" alt="">
+                                            <div class="testimonial-quote">
+                                                <h4 class="clients-name">Jannu </h4>
+                                                <p class="clients-designation">Account Officer, Bank LTD</p>
+                                                <p class="clients-feedback">
+                                                    Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block d-flex align-item-center">
+                                            <img src="client-3.jpg" alt="">
+                                            <div class="testimonial-quote">
+                                                <h4 class="clients-name">Jannu </h4>
+                                                <p class="clients-designation">Account Officer, Bank LTD</p>
+                                                <p class="clients-feedback">
+                                                    Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block d-flex align-item-center">
+                                            <img src="client-3.jpg" alt="">
+                                            <div class="testimonial-quote">
+                                                <h4 class="clients-name">Jannu </h4>
+                                                <p class="clients-designation">Account Officer, Bank LTD</p>
+                                                <p class="clients-feedback">
+                                                    Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block d-flex align-item-center">
+                                            <img src="client-3.jpg" alt="">
+                                            <div class="testimonial-quote">
+                                                <h4 class="clients-name">Jannu </h4>
+                                                <p class="clients-designation">Account Officer, Bank LTD</p>
+                                                <p class="clients-feedback">
+                                                    Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carousel Item  -->
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block d-flex align-item-center">
+                                            <img src="client-3.jpg" alt="">
+                                            <div class="testimonial-quote">
+                                                <h4 class="clients-name">Jannu </h4>
+                                                <p class="clients-designation">Account Officer, Bank LTD</p>
+                                                <p class="clients-feedback">
+                                                    Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block d-flex align-item-center">
+                                            <img src="client-3.jpg" alt="">
+                                            <div class="testimonial-quote">
+                                                <h4 class="clients-name">Jannu </h4>
+                                                <p class="clients-designation">Account Officer, Bank LTD</p>
+                                                <p class="clients-feedback">
+                                                    Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block d-flex align-item-center">
+                                            <img src="client-3.jpg" alt="">
+                                            <div class="testimonial-quote">
+                                                <h4 class="clients-name">Jannu </h4>
+                                                <p class="clients-designation">Account Officer, Bank LTD</p>
+                                                <p class="clients-feedback">
+                                                    Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block d-flex align-item-center">
+                                            <img src="client-3.jpg" alt="">
+                                            <div class="testimonial-quote">
+                                                <h4 class="clients-name">Jannu </h4>
+                                                <p class="clients-designation">Account Officer, Bank LTD</p>
+                                                <p class="clients-feedback">
+                                                    Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carousel Item  -->
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block d-flex align-item-center">
+                                            <img src="client-3.jpg" alt="">
+                                            <div class="testimonial-quote">
+                                                <h4 class="clients-name">Jannu </h4>
+                                                <p class="clients-designation">Account Officer, Bank LTD</p>
+                                                <p class="clients-feedback">
+                                                    Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block d-flex align-item-center">
+                                            <img src="client-3.jpg" alt="">
+                                            <div class="testimonial-quote">
+                                                <h4 class="clients-name">Jannu </h4>
+                                                <p class="clients-designation">Account Officer, Bank LTD</p>
+                                                <p class="clients-feedback">
+                                                    Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block d-flex align-item-center">
+                                            <img src="client-3.jpg" alt="">
+                                            <div class="testimonial-quote">
+                                                <h4 class="clients-name">Jannu </h4>
+                                                <p class="clients-designation">Account Officer, Bank LTD</p>
+                                                <p class="clients-feedback">
+                                                    Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block d-flex align-item-center">
+                                            <img src="client-3.jpg" alt="">
+                                            <div class="testimonial-quote">
+                                                <h4 class="clients-name">Jannu </h4>
+                                                <p class="clients-designation">Account Officer, Bank LTD</p>
+                                                <p class="clients-feedback">
+                                                    Jannu's Ride Share revolutionizes transportation with its user-friendly app, reliable drivers, and commitment to safety. Offering punctual, affordable rides, it ensures comfortable journeys with professional drivers. Prioritizing environmental sustainability through ridesharing options, it sets a new standard in commuting, providing a superior and eco-friendly transportation solution.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#testimonial-carousel" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#testimonial-carousel" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section End  -->
+
+    <!-- Download Section Star  -->
+    <section class="section-bg section-padding">
+        <div class="container">
+            <div class="row position-relative">
+                <img src="mobilephone.png" alt="" class="blank-phone d-none d-lg-block">
+                <div class="col-md-9">
+                    <div class="download-app-title">
+                        <h2 class="section-title">download app</h2>
+                        <p class="section-subtitle">Choose Jannu's ride share  for best service </p>
+                    </div>
+                    <div class="user-app-download my-5">
+                        <h2>Download User App</h2>
+                        <p>Get our service and make life easy & scequre</p>
+                        <a href="#"><img src="Google-Play-footer-.png" alt=""></a>
+                        <a href="#"><img src="App-Store-footer-.png" alt=""></a>
+                    </div>
+                    <div class="driver-app-download">
+                        <h2>Download Driver App</h2>
+                        <p>Earn money through easy process</p>
+                        <a href="#"><img src="Google-Play-footer-.png" alt=""></a>
+                        <a href="#"><img src="App-Store-footer-.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="app-feature-block">
+                        <i class="fas fa-star-half-alt"></i>
+                        <h3>App Feature 1</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, conse ctetur adipi scing elit
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="app-feature-block">
+                        <i class="fas fa-star-half-alt"></i>
+                        <h3>App Feature 2</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, conse ctetur adipi scing elit
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="app-feature-block">
+                        <i class="fas fa-star-half-alt"></i>
+                        <h3>App Feature 3</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, conse ctetur adipi scing elit
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Footer Star  -->
+    <section class="section-padding bg-dark footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer-1">
+                        <img src="LOGO (1).png" alt="" class="logo">
+                        <p>
+                            Jannu's ride share  is A New Generation Transportation Network Company. Lowest fare & Fastest Reliable
+                            Five Star Service Our First Priority.We started our business from New YorkUSA in 2019. Now
+                            we moving forward to Bangladesh, Nepal, .
+                        </p>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-2">
+                        <h3 class="footer-title">Mens</h3>
+                        <div class="d-flex">
+                            <ul class="footer-list-1">
+                                <li><a href="#">Jannu's ride share </a></li>
+                                <li><a href="#">bike</a></li>
+                                <li><a href="#">car</a></li>
+                                <li><a href="#">delivery</a></li>
+                            </ul>
+                            <ul class="footer-list-2">
+                                <li><a href="#">career</a></li>
+                                <li><a href="#">blog</a></li>
+                                <li><a href="#">about us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-3">
+                        <h3 class="footer-title">Earn</h3>
+                        <ul>
+                            <li><a href="#">Drive bike</a></li>
+                            <li><a href="#">Drive car</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-4">
+                        <h3 class="footer-title">newsletter</h3>
+                        <form id="footer-newsletter">
+                            <div class="form-group">
+                                <input type="email" placeholder="Email">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </form>
+                        <address>
+                            Jannu's ride share, Guntur,Andhra pradesh, <br>
+
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>Copyright @ 2024 Jannu. All right reserved</footer>
+    <!-- Footer End  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"
+        integrity="sha512-iceXjjbmB2rwoX93Ka6HAHP+B76IY1z0o3h+N1PeDtRSsyeetU3/0QKJqGyPJcX63zysNehggFwMC/bi7dvMig=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script>
+    
+</body>
+
+</html>

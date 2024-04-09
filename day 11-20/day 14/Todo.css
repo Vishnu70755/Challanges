@@ -1,0 +1,64 @@
+body {
+    background-image: url('https://img.freepik.com/free-photo/top-view-list-written-black-notebook-black-table-free-space_140725-142507.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    font-display: lucida bold;
+}
+
+.container {
+    width: 80%; /* Adjusted width for responsiveness */
+    max-width: 360px; /* Set a maximum width for larger screens */
+    margin: 5% auto; /* Center the container */
+    padding: 33px;
+    text-align: center;
+    background-color: transparent;
+}
+
+input {
+    width: 100%; /* Make the input box fill the container */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 8px;
+    border: 2px solid rgb(75, 121, 134);
+    outline: none;
+    font-size: 19px;
+}
+
+button {
+    width: 100%; /* Make the button fill the container */
+    box-sizing: border-box; /* Include padding and border in the width */
+    height: 41px;
+    border-radius: 10px;
+    background-color: rgb(132, 153, 210);
+    color: rgb(18, 17, 17);
+    font-style: italic;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    font-size: 19px;
+    margin-top: 10px; /* Add some spacing between input and button */
+}
+
+.text ul {
+    position: relative;
+    background-color: transparent;
+    color: rgb(9, 9, 9);
+    font-size: 19px;
+    font-style: normal;
+    padding: 7px;
+    text-align: left;
+}
+
+.text ul i {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Media Query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}

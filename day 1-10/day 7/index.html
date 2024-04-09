@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <!-- Expense Input Form Section -->
+        <div class="section">
+            <h2>Expense Input Form</h2>
+            <div class="form-container">
+                <form id="expenseForm">
+                    <label for="expenseDate">Date:</label>
+                    <input type="date" id="expenseDate" name="expenseDate" required>
+                    
+                    <label for="expenseAmount">Amount:</label>
+                    <input type="text" id="expenseAmount" name="expenseAmount" pattern="^\d+(\.\d{1,2})?$" placeholder="Enter amount" required>
+                    
+                    <label for="expenseCategory">Category:</label>
+                    <input type="text" id="expenseCategory" name="expenseCategory" placeholder="Enter category" required>
+                    
+                    <label for="expenseDescription">Description:</label>
+                    <textarea id="expenseDescription" name="expenseDescription" rows="4" placeholder="Enter description" required></textarea>
+                    
+                    <button type="button" class="submit-button" onclick="addExpense()">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Expense List Display Section -->
+        <div class="section">
+            <h2>Expense List Display</h2>
+            <ul id="expenseList" class="expense-list">
+            </ul>
+        </div>
+
+        <!-- Expense Summary Section -->
+        <div class="section">
+            <h2>Expense Summary</h2>
+            <div id="expenseSummary">
+                Total Expenses: <span id="totalExpenses">$0.00</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addExpense() {
+            // Retrieve form values
+            var date = document.getElementById("expenseDate").value;
+            var amount = document.getElementById("expenseAmount").value;
+            var category = document.getElementById("expenseCategory").value;
+            var description = document.getElementById("expenseDescription").value;
+
+            // Validate amount
+            if (!validateAmount(amount)) {
+                alert("Please enter a valid amount.");
+                return;
+            }
+
+            // Create new expense item
+            var newExpense = document.createElement("li");
+            newExpense.className = "expense-item";
+            newExpense.innerHTML = '<input type="checkbox"><label><span class="expense-name">' + category + ':</span> $' + amount + '<br>Date: ' + date + '<br>Description: ' + description + '</label>';
+
+            // Add new expense to the list
+            document.getElementById("expenseList").appendChild(newExpense);
+
+            // Update total expenses
+            updateTotalExpenses(parseFloat(amount));
+        }
+
+        function validateAmount(amount) {
+            var regex = /^\d+(\.\d{1,2})?$/;
+            return regex.test(amount);
+        }
+
+        function updateTotalExpenses(newExpenseAmount) {
+            var totalExpensesElement = document.getElementById("totalExpenses");
+            var currentTotal = parseFloat(totalExpensesElement.innerText.substring(1));
+            var newTotal = currentTotal + newExpenseAmount;
+            totalExpensesElement.innerText = "$" + newTotal.toFixed(2);
+        }
+    </script>
+</body>
+</html>
