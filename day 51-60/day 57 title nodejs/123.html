@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>vishnu  Publish Article</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: aqua;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        color: #333;
+    }
+    input[type="text"],
+    input[type="date"],
+    textarea {
+        width: calc(100% - 70px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    input[type="submit"],
+    input[type="button"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    input[type="submit"]:hover,
+    input[type="button"]:hover {
+        background-color: #45a049;
+    }
+    .article {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        margin-top: 10px;
+        position: relative;
+        background-color: #e6f7ff; /* Light blue background */
+    }
+    .article h2 {
+        margin-top: 0;
+    }
+    .remove-btn {
+        position: absolute;
+        top: 5px;
+        right: 40px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        line-height: 1;
+        cursor: pointer;
+    }
+    .cancel-btn {
+        background-color: #ccc;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1> Welcome vishnu Publish Article</h1>
+    <form id="articleForm">
+        <input type="text" id="title" placeholder="Enter title..." required><br>
+        <input type="text" id="author" placeholder="Enter author name..." required><br>
+        <input type="date" id="publicationDate" required><br>
+        <input type="text" id="category" placeholder="Enter category..." required><br>
+        <input type="text" id="tags" placeholder="Enter tags..." required><br>
+        <input type="text" id="imageUrl" placeholder="Enter image URL..." required><br>
+        <input type="text" id="sourceUrl" placeholder="Enter source URL..." required><br>
+        <input type="number" id="readingTime" placeholder="Enter reading time (minutes)..." required><br>
+        <textarea id="content" placeholder="Enter content..." rows="4" required></textarea><br>
+        <input type="submit" value="Publish">
+        <input type="button" value="Cancel" class="cancel-btn" onclick="resetForm()">
+    </form>
+    <div id="articles"></div>
+</div>
+
+<script>
+    document.getElementById('articleForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var title = document.getElementById('title').value;
+        var author = document.getElementById('author').value;
+        var publicationDate = document.getElementById('publicationDate').value;
+        var category = document.getElementById('category').value;
+        var tags = document.getElementById('tags').value;
+        var imageUrl = document.getElementById('imageUrl').value;
+        var sourceUrl = document.getElementById('sourceUrl').value;
+        var readingTime = document.getElementById('readingTime').value;
+        var content = document.getElementById('content').value;
+        if (title.trim() !== '' && author.trim() !== '' && publicationDate.trim() !== '' && category.trim() !== '' && tags.trim() !== '' && imageUrl.trim() !== '' && sourceUrl.trim() !== '' && readingTime.trim() !== '' && content.trim() !== '') {
+            var article = document.createElement('div');
+            article.classList.add('article');
+            article.innerHTML = '<h2>' + title + '</h2><p>By: ' + author + '<br>Publication Date: ' + publicationDate + '<br>Category: ' + category + '<br>Tags: ' + tags + '<br><img src="' + imageUrl + '" alt="' + title + '"><br>Source URL: <a href="' + sourceUrl + '">' + sourceUrl + '</a><br>Reading Time: ' + readingTime + ' minutes</p><p>' + content + '</p><button class="remove-btn" onclick="removeArticle(this)">X</button>';
+            document.getElementById('articles').appendChild(article);
+            document.getElementById('title').value = '';
+            document.getElementById('author').value = '';
+            document.getElementById('publicationDate').value = '';
+            document.getElementById('category').value = '';
+            document.getElementById('tags').value = '';
+            document.getElementById('imageUrl').value = '';
+            document.getElementById('sourceUrl').value = '';
+            document.getElementById('readingTime').value = '';
+            document.getElementById('content').value = '';
+        }
+    });
+
+    function removeArticle(button) {
+        button.parentNode.remove();
+    }
+
+    function resetForm() {
+        document.getElementById('title').value = '';
+        document.getElementById('author').value = '';
+        document.getElementById('publicationDate').value = '';
+        document.getElementById('category').value = '';
+        document.getElementById('tags').value = '';
+        document.getElementById('imageUrl').value = '';
+        document.getElementById('sourceUrl').value = '';
+        document.getElementById('readingTime').value = '';
+        document.getElementById('content').value = '';
+    }
+</script>
+</body>
+</html>

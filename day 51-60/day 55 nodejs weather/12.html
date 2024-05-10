@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vishnu Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://images.unsplash.com/photo-1533029339491-3d36c2b95c64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        td {
+            font-size: 16px;
+        }
+        .default-weather {
+            font-style: italic;
+            color: #666;
+        }
+        .weather-icon {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+        .sunny { color: #f5a623; }
+        .cloudy { color: #7f8c8d; }
+        .rainy { color: #3498db; }
+        .thunderstorm { color: #f39c12; }
+        .snowy { color: #ecf0f1; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Forecast for Indian Cities</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>Temperature (&deg;C)</th>
+                    <th>Weather</th>
+                </tr>
+            </thead>
+            <tbody id="weatherTableBody">
+                <tr>
+                    <td>Mumbai</td>
+                    <td class="default-weather">25</td>
+                    <td class="default-weather"><img class="weather-icon sunny" src="https://img.icons8.com/color/48/000000/sun--v1.png" alt="Sunny"> Sunny</td>
+                </tr>
+                <tr>
+                    <td>Delhi</td>
+                    <td class="default-weather">20</td>
+                    <td class="default-weather"><img class="weather-icon cloudy" src="https://img.icons8.com/color/48/000000/cloud.png" alt="Cloudy"> Cloudy</td>
+                </tr>
+                <tr>
+                    <td>Bangalore</td>
+                    <td class="default-weather">22</td>
+                    <td class="default-weather"><img class="weather-icon rainy" src="https://img.icons8.com/color/48/000000/rain--v1.png" alt="Rainy"> Rainy</td>
+                </tr>
+                <tr>
+                    <td>Kolkata</td>
+                    <td class="default-weather">28</td>
+                    <td class="default-weather"><img class="weather-icon cloudy" src="https://img.icons8.com/color/48/000000/cloud.png" alt="Cloudy"> Partly Cloudy</td>
+                </tr>
+                <tr>
+                    <td>Chennai</td>
+                    <td class="default-weather">30</td>
+                    <td class="default-weather"><img class="weather-icon thunderstorm" src="https://img.icons8.com/color/48/000000/thunderstorm.png" alt="Thunderstorm"> Thunderstorm</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="default-weather">Fetching real-time data...</p>
+    </div>
+</body>
+</html>

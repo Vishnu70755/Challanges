@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .chat-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-header {
+            padding: 10px;
+            background-color: #075e54;
+            color: #fff;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .chat-header h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .chat-messages {
+            padding: 10px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .message {
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .sent {
+            background-color: #dcf8c6;
+            text-align: right;
+        }
+
+        .received {
+            background-color: #fff;
+            text-align: left;
+        }
+
+        .message p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .message .time {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .chat-input {
+            padding: 10px;
+            background-color: #f7f7f7;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            display: flex;
+        }
+
+        .chat-input input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        .chat-input button {
+            padding: 8px 15px;
+            border: none;
+            background-color: #128c7e;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>WhatsApp Chat</h2>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Example Messages -->
+            <div class="message sent">
+                <p>Hello, how are you?</p>
+                <p class="time">10:00 AM</p>
+            </div>
+            <div class="message received">
+                <p>I'm good, thank you!</p>
+                <p class="time">10:05 AM</p>
+            </div>
+            <!-- More Messages Here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userMessage" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        var replies = {
+            "hello": "Hi there!",
+            "how are you": "I'm fine, thanks for asking!",
+            "good morning": "Good morning! Have a great day!",
+            "good night": "Good night! Sweet dreams!"
+            // Add more message-reply pairs here
+        };
+
+        function sendMessage() {
+            var userMessage = document.getElementById("userMessage").value.toLowerCase();
+            if (userMessage.trim() === "") return;
+
+            var currentTime = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            
+            displayMessage(userMessage, "sent", currentTime);
+            setTimeout(function() {
+                var replyMessage = getReplyMessage(userMessage);
+                displayMessage(replyMessage, "received", currentTime);
+            }, 1000);
+            document.getElementById("userMessage").value = "";
+        }
+
+        function displayMessage(message, type, time) {
+            var messagesContainer = document.getElementById("chatMessages");
+            var messageDiv = document.createElement("div");
+            messageDiv.className = "message " + type;
+            var messageContent = "<p>" + message + "</p><p class='time'>" + time + "</p>";
+            messageDiv.innerHTML = messageContent;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function getReplyMessage(userMessage) {
+            var reply = replies[userMessage];
+            return reply ? reply : "Hii How are you";
+        }
+    </script>
+</body>
+</html>
+
